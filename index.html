@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    
+    <header>
+        <nav id="desktop-nav">
+            <div class="logo">
+                Dominick Jean
+            </div>
+            <div>
+                <ul class="nav-links">
+                    <a href="#about" class="">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <!-- Contact button -->
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">
+                Dominick Jean
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <a href="#about" class="" onclick="toggleMenu()">About</a>
+                    <a href="#skills" onclick="toggleMenu()">Skills</a>
+                    <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+                    <!-- Contact button -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <div class="about_pic">
+            <img src="./images/selfie.jpg" alt="Dominick Jean profile picture">
+        </div>
+        <div class="about_text">
+            <h1 class="section_text_title">Software Developer</h1>
+            <p class="section_text_p1">
+                FAU computer science graduate proficient in C++, C#, Java, and Python, with a 
+                focus on Unity game development. Database certified and dedicated team player, 
+                eager to contribute skills to a dynamic programming team and drive impactful results.
+            </p>
+            <div id="socials">
+                <img 
+                src="./images/github1.png" 
+                alt="Github Profile" 
+                class="icon" 
+                onclick="location.href='https://github.com/DJean09'"
+                />
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h1 class="section_text_title">Known Languages</h1>
+        <div class="lang-top">
+            <div>
+                <h3 class="logo-name">C#</h3>
+                <img src="./images/CSharpLogo.png" alt="C#">
+            </div>
+            <div>
+                <h3 class="logo-name">C++</h3>
+                <img src="./images/C++Logo.png" alt="C++">
+            </div>
+            <div>
+                <h3 class="logo-name">Java</h3>
+                <img src="./images/JavaLogo.png" alt="Java">
+            </div>
+            <div>
+                <h3 class="logo-name">Python</h3>
+                <img src="./images/PythonLogo.png" alt="Python">
+            </div>
+        </div>
+        <div class="lang-bottom">
+            <div>
+                <h3 class="logo-name">HTML</h3>
+                <img src="./images/CSSLogo.png" alt="CSS">
+            </div>
+            <div>
+                <h3 class="logo-name">CSS</h3>
+                <img src="./images/HTMLLogo.png" alt="HTML">
+            </div>
+            <div>
+                <h3 class="logo-name">Javascript</h3>
+                <img src="./images/JavascriptLogo2.png" alt="Javascript">
+            </div>
+            
+            
+            
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="portfolio-row1">
+            <div class="portfolio-1">Drone</div>
+            <div class="portfolio-2">Video Game</div>
+        </div>
+        <!-- 
+            left side, drone project, right side, video game 
+            probably done like this
+            <div (set to flex)
+                <div left side>
+                <div right side>
+            />
+        -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
