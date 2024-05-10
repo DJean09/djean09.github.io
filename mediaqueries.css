@@ -7,3 +7,49 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 1070px) {
+    #skills {
+        justify-content: center;
+        height: auto; /* Changed from 100vh to auto to accommodate content height */
+        align-items: center;
+        max-width: 1070px; /* Set the maximum width for the skills section */
+        margin: 0 auto; /* Center the section horizontally */
+    }
+
+    .lang-top,
+    .lang-bottom {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap onto the next line */
+        gap: 2rem; /* Adjust the gap as needed */
+        justify-content: center;
+        align-items: center; /* Align items vertically */
+        scale: .8;
+        opacity: 0;
+        animation: fade-in linear forwards;
+    }
+
+    .lang-top img,
+    .lang-bottom img {
+        max-width: 100%; /* Limit image width to parent container's width */
+        max-height: 10rem; /* Adjust max-height as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        height: auto; /* Change from 80vh to auto to fit content */
+    }
+
+    .about_pic img{
+        display: block; /* Keeps the image as a block-level element */
+        margin: 0 auto; /* Centers the image horizontally */
+        width: 75%; /* Sets a fixed width for the image */
+        height: auto; /* Keeps the image's aspect ratio intact */
+    }
+}
