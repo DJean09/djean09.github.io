@@ -333,6 +333,12 @@ main {
   margin-right: 1em;
 }
 
+.projects__img {
+  width: 300px;
+  max-height: 300px;
+  border-radius: 5px;
+}
+
 .projects__grid {
   max-width: 1100px;
   margin: 0 auto;
