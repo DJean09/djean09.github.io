@@ -1,172 +1,269 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
-    
-    <header>
-        <nav id="desktop-nav">
-            <div class="logo">
-                Dominick Jean
-            </div>
-            <div>
-                <ul class="nav-links">
-                    <a href="#about" class="">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <!-- Contact button -->
-                </ul>
-            </div>
-        </nav>
-        <nav id="hamburger-nav">
-            <div class="logo">
-                Dominick Jean
-            </div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <a href="#about" class="" onclick="toggleMenu()">About</a>
-                    <a href="#skills" onclick="toggleMenu()">Skills</a>
-                    <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
-                    <!-- Contact button -->
-                </div>
-            </div>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dominick Jean</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3 class="header__name">
+        Hello!!
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+        type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
     </header>
-    
-    <section id="about">
-        <div class="about_pic">
-            <img src="./images/selfie.jpg" alt="Dominick Jean profile picture">
+
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <img src="images/selfie.jpg" alt="Dominick" class="about__img" />
+        <h1 class="about__name">Dominick Jean</h1>
+        <h2 class="about__role">Software Developer</h2>
+        <p class="about__desc">
+          Thank you for visiting my page. I am a computer science graduate from 
+          Florida Atlantic University. I have chosen this path because I thought 
+          it was cool to be the hacker in the movies and I wanted to create games 
+          for my friends and family to play. I ended up wanting to expand my knowledge 
+          and became proficient in C++, C#, Java, and Python. While also working with 
+          Unreal Engine, Unity, and Godot for game development.
+        </p>
+
+        <div class="about__contact center">
+          <a href="https://example.com">
+            <span class="btn btn--outline">Resume</span>
+          </a>
+
+          <a
+            href="https://github.com/djean09"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/dominick-jean"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
         </div>
-        <div class="about_text">
-            <h1 class="section_text_title">Software Developer</h1>
-            <p class="section_text_p1">
-                FAU computer science graduate proficient in C++, C#, Java, and Python, with a 
-                focus on Unity game development. Database certified and dedicated team player, 
-                eager to contribute skills to a dynamic programming team and drive impactful results.
+      </div>
+      
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">C#</li>
+          <li class="skills__list-item btn btn--plain">C++</li>
+          <li class="skills__list-item btn btn--plain">Java</li>
+          <li class="skills__list-item btn btn--plain">Python</li>
+          <li class="skills__list-item btn btn--plain">HTML</li>
+          <li class="skills__list-item btn btn--plain">CSS</li>
+          <li class="skills__list-item btn btn--plain">JavaScript</li>
+          <li class="skills__list-item btn btn--plain">Git</li>
+          <li class="skills__list-item btn btn--plain">CI/CD</li>
+          <li class="skills__list-item btn btn--plain">Photoshop</li>
+          <li class="skills__list-item btn btn--plain">Premiere</li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Wireless Communication and Simulation of Underwater Drones Using Acoustics</h3>
+            <p class="project__description">
+              Implement a custom-designed acoustic modem into an existing BlueROV2 drone to 
+              communicate with the ground control station wirelessly. Remove physical limitations 
+              of communicating with an underwater drone through a cable. Create simulations to 
+              calculate needed frequencies for underwater communication
             </p>
-            <div id="socials">
-                <img 
-                src="./images/github1.png" 
-                alt="Github Profile" 
-                class="icon" 
-                onclick="location.href='http://github.com/DJean09'"
-                />
-                <img 
-                src="images/linkedin.png" 
-                alt="Linkedin Profile" 
-                class="icon" 
-                onclick="location.href='http://www.linkedin.com/in/dominick-jean'"
-                />
-            </div>
-        </div>
-    </section>
-    <section id="skills">
-        <h1 class="section_text_title">Known Languages</h1>
-        <div class="lang-top">
-            <div>
-                <h3 class="logo-name">C#</h3>
-                <img src="./images/CSharpLogo.png" alt="C#">
-            </div>
-            <div>
-                <h3 class="logo-name">C++</h3>
-                <img src="./images/C++Logo.png" alt="C++">
-            </div>
-            <div>
-                <h3 class="logo-name">Java</h3>
-                <img src="./images/JavaLogo.png" alt="Java">
-            </div>
-            <div>
-                <h3 class="logo-name">Python</h3>
-                <img src="./images/PythonLogo.png" alt="Python">
-            </div>
-        </div>
-        <div class="lang-bottom">
-            <div>
-                <h3 class="logo-name">HTML</h3>
-                <img src="./images/CSSLogo.png" alt="CSS">
-            </div>
-            <div>
-                <h3 class="logo-name">CSS</h3>
-                <img src="./images/HTMLLogo.png" alt="HTML">
-            </div>
-            <div>
-                <h3 class="logo-name">Javascript</h3>
-                <img src="./images/JavascriptLogo2.png" alt="Javascript">
-            </div>
-            
-            
-            
-        </div>
-    </section>
-    <section id="portfolio">
-        <div>
-            <div class="portfolio-1">
-                <h1>Title: Wireless Receival of ROV Data & Simulation of Wireless Control of Underwater Drones using Acoustics</h1>
-                <p><span>Introduction:</span> Remote-operated vehicles (ROVs) are a useful and popular platform for underwater 
-                    exploration in ocean environments. They are typically equipped with cameras, thrusters, and lights for better viewing 
-                    underwater. Many smaller ROVs use tethers for communication between the ground control and the submerged ROV. This, 
-                    however, presents a physical limitation as the ROV can only move as far as the tether will allow it to. Attempts have 
-                    been made to work around this limitation through the usage of wireless communication methods for the command and control 
-                    of ROVs. In the paper “Towards Wireless Controlled Underwater Vehicles” the authors describe an implementation of a BlueROV2 
-                    using a LoRa-based radio for communications. Radio communication underwater is not ideal underwater due to the rapid attenuation 
-                    of RF radio signals in the water so this implementation while proving the concept of wireless underwater drones possible, 
-                    still has significant range limitations as the tether approach does.</p>
-                
-                <p><span>My Role:</span> As a key member of the project team, my focus was twofold: developing a realistic simulation of the BlueROV 
-                    using Unreal Engine and contributing to the coding efforts for the drone's communication protocols. The simulation, crafted entirely 
-                    by me, served as a critical testing ground for our theories and designs.</p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Unreal Engine 4</li>
+              <li class="project__stack-item">C</li>
+              <li class="project__stack-item">C++</li>
+              <li class="project__stack-item">Python</li>
+            </ul>
 
-                <p><span>Simulation Development:</span> Using HoloOcean as a foundation, I meticulously modeled the BlueROV, ensuring the virtual counterpart 
-                    mirrored the real drone's specifications. The immersive environment I created was not just a visual spectacle but a functional space 
-                    where the intricate dance of data transmission unfolded. The simulation displayed key metrics such as transmission time, depth, location, 
-                    and signal characteristics, painting a vivid picture of the underwater communication process.</p>
-                
-                <h3>Achievements:</h5>
-                <ol>
-                    <li>Unidirectional Communication Link:</li>
-                    <ul>
-                        <li>Established a robust link between the BlueROV2 and the ground control station running QGroundControl.</li>
-                        <li>Achieved data transmission speeds of up to 1kb/s, allowing for real-time sensor data exchange.</li>
-                        <li>Fulfilled key functional requirements, marking a significant milestone in wireless underwater communication.</li>
-                    </ul>
-                    <li>Simulation Development:</li>
-                    <ul>
-                        <li>Utilized HoloOcean software to create a realistic simulation environment.</li>
-                        <li>Introduced new features like depth sensors and absorption metrics.</li>
-                        <li>Crafted a custom BlueROV template, ensuring the simulated drone mirrored the actual ROV's capabilities.</li>
-                        <li>Integrated a communication link within the simulation to demonstrate potential bidirectional communication.</li>
-                    </ul>
-                    <li>Modem Integration:</li>
-                    <ul>
-                        <li>Successfully installed the modem within the BlueROV2's enclosure.</li>
-                        <li>Powered the modem using the ROV's onboard batteries, ensuring consistent and safe voltage levels.</li>
-                        <li>Implemented a waterproof solution for the hydrophone, preserving the integrity of the internal components.</li>
-                        <li>Connected the modem to the onboard Raspberry Pi, completing the setup for wireless data transmission.</li>
-                    </ul>
-                </ol>
-            </div>
-        </div>
-        <!-- 
-            video game
-            left side, drone project, right side, video game 
-            probably done like this
-            <div (set to flex)
-                <div left side>
-                <div right side>
-            />
-        -->
-    </section>
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://example.com"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
 
-    <script src="script.js"></script>
-</body>
+          <div class="project">
+            <h3>Pokemon Card Scanner</h3>
+            <p class="project__description">
+              Seamlessly scans Pokemon trading cards through the user's camera and displays 
+              information regarding what it is and how much it is worth. Uses OpenCV and 
+              Image hashing to scan, filter, and rotate perspective of cards in view.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">APIs</li>
+            </ul>
+
+            <a
+              href="https://github.com/DJean09/Python-Projects/tree/main/Pokemon-TCG-Tracker"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://example.com"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          
+          <div class="project">
+            <h3>Top-Down Survival Game</h3>
+            <p class="project__description">
+              The player is alone in a cave and must survive a wave of enemies. The longer 
+              they survive, the bigger their score. Enemies use A* pathfinding to locate 
+              and follow the player to attack. Developed visual assets, including sprites 
+              and animations using Aseprite.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">C#</li>
+              <li class="project__stack-item">Unity</li>
+              <li class="project__stack-item">Aseprite</li>
+            </ul>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://example.com"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Sudoku Solver</h3>
+          <p class="project__description">
+            Allows the user to input a sudoku map for the program to solve. Has a menu interface 
+            that allows the user to edit a row or column, solve, or exit
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Python</li>
+          </ul>
+
+          <a
+            href="https://github.com/DJean09/Python-Projects/tree/main/Sudoku-Solver"
+            aria-label="source code"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://example.com"
+            aria-label="live preview"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        </div>
+      </section>
+
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:dominick.jean@outlook.com">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+    </main>
+
+
+    <!-- Pop Ups -->
+    <div id="project__1" class="popup__container">
+      <div class="popup__content">
+        <span class="close_button">&times;</span>
+        <h2>Project 1</h2>
+        <p>
+          This is a project that I worked on. It was a lot of fun and I learned a lot from it.
+        </p>
+        <button class="btn btn--outline">Close</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
